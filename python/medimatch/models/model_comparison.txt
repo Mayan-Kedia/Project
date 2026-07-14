@@ -1,0 +1,55 @@
+MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=MediMatch — Sentiment Model Comparison
+=
+
+Metric           Logistic Regression          Naïve Bayes
+-------------------------------------------------------
+Accuracy                      0.8867               0.8498
+Precision                     0.8961               0.8463
+Recall                        0.9541               0.9686
+F1-Score                      0.9242               0.9033
+
+Selected: logistic_regression
