@@ -67,6 +67,12 @@ st.markdown("""
         margin-bottom: 0.2rem;
         letter-spacing: -0.5px;
     }
+    .main-header .pill-icon {
+        background: linear-gradient(135deg, #06b6d4 0%, #0d9488 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
     .main-header p {
         font-size: 1rem;
         color: #6b7280;
@@ -199,6 +205,10 @@ st.markdown("""
     .empty-state .emoji {
         font-size: 3rem;
         margin-bottom: 1rem;
+        background: linear-gradient(135deg, #06b6d4 0%, #0d9488 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
     .empty-state h3 {
         color: #6b7280;
@@ -341,7 +351,7 @@ def main():
     # ---- Header ----
     st.markdown("""
     <div class="main-header">
-        <h1>💊 MediMatch</h1>
+        <h1><span class="pill-icon">💊</span> MediMatch</h1>
         <p>Condition-Based Drug Search & Sentiment-Ranked Recommendation System</p>
     </div>
     """, unsafe_allow_html=True)
