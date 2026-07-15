@@ -92,28 +92,29 @@ st.markdown("""
 
     /* ---- Drug result card ---- */
     .drug-card {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
+        background: #1e293b;
+        border: 1px solid #334155;
         border-radius: 14px;
         padding: 1.2rem 1.5rem;
         margin-bottom: 1rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
     }
     .drug-card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        border-color: #475569;
     }
 
     .drug-name {
         font-size: 1.3rem;
         font-weight: 700;
-        color: #1f2937;
+        color: #f8fafc;
         margin-bottom: 0.4rem;
     }
     .drug-condition {
         font-size: 0.85rem;
-        color: #6b7280;
+        color: #94a3b8;
         margin-bottom: 0.8rem;
     }
 
@@ -154,7 +155,7 @@ st.markdown("""
     .score-bar-container {
         width: 100%;
         height: 6px;
-        background: #e5e7eb;
+        background: #334155;
         border-radius: 3px;
         overflow: hidden;
         margin-top: 0.3rem;
@@ -168,9 +169,9 @@ st.markdown("""
     /* ---- Review snippet ---- */
     .review-snippet {
         font-size: 0.82rem;
-        color: #6b7280;
+        color: #94a3b8;
         font-style: italic;
-        border-left: 3px solid #e5e7eb;
+        border-left: 3px solid #475569;
         padding-left: 0.8rem;
         margin-top: 0.6rem;
         line-height: 1.5;
@@ -179,12 +180,12 @@ st.markdown("""
     /* ---- Search summary ---- */
     .search-summary {
         font-size: 0.95rem;
-        color: #4b5563;
+        color: #e2e8f0;
         margin-bottom: 1rem;
         padding: 0.6rem 1rem;
-        background: #f9fafb;
+        background: #1e293b;
         border-radius: 8px;
-        border: 1px solid #e5e7eb;
+        border: 1px solid #334155;
     }
 
     /* ---- Sidebar styling removed to allow native theming ---- */
