@@ -68,7 +68,7 @@ st.markdown("""
         letter-spacing: -0.5px;
     }
     .main-header .pill-icon {
-        background: linear-gradient(135deg, #06b6d4 0%, #0d9488 100%);
+        background: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -205,7 +205,7 @@ st.markdown("""
     .empty-state .emoji {
         font-size: 3rem;
         margin-bottom: 1rem;
-        background: linear-gradient(135deg, #06b6d4 0%, #0d9488 100%);
+        background: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
