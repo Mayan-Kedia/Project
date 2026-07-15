@@ -187,10 +187,7 @@ st.markdown("""
         border: 1px solid #e5e7eb;
     }
 
-    /* ---- Sidebar styling ---- */
-    [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-    }
+    /* ---- Sidebar styling removed to allow native theming ---- */
 
     /* ---- Empty state ---- */
     .empty-state {
@@ -470,9 +467,7 @@ def main():
     st.caption(
         "⚠️ **Disclaimer:** This system is for educational and informational purposes only. "
         "It does not constitute medical advice. Always consult a qualified healthcare "
-        "professional before making any medication-related decisions.  \n"
-        "**MediMatch** — B.Tech 1st Year IR & ML Project by Mayan Kedia "
-        "(Enrollment No. 2501010050), JIIT Noida"
+        "professional before making any medication-related decisions."
     )
 
 
