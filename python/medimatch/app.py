@@ -229,13 +229,6 @@ def load_artifacts():
         "sentiment_scores_df": load_artifact(str(processed_dir / "sentiment_scores.pkl")),
     }
 
-    # Load model comparison if available
-    comparison_path = models_dir / "model_comparison.txt"
-    if comparison_path.exists():
-        artifacts["model_comparison"] = comparison_path.read_text(encoding="utf-8")
-    else:
-        artifacts["model_comparison"] = "No comparison file found."
-
     # Load a sample of reviews for snippets
     all_data_path = processed_dir / "all_cleaned.pkl"
     if all_data_path.exists():
@@ -307,7 +300,16 @@ def render_sidebar(artifacts):
         st.divider()
 
         st.markdown("### 📊 Model Performance")
-        st.code(artifacts["model_comparison"], language=None)
+        
+        # Load model comparison dynamically to avoid caching stale text
+        models_dir = Path(__file__).parent / "models"
+        comparison_path = models_dir / "model_comparison.txt"
+        if comparison_path.exists():
+            comp_text = comparison_path.read_text(encoding="utf-8")
+        else:
+            comp_text = "No comparison file found."
+            
+        st.code(comp_text, language=None)
 
         st.divider()
 
