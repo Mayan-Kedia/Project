@@ -202,13 +202,9 @@ st.markdown("""
         padding: 3rem 1rem;
         color: #9ca3af;
     }
-    .empty-state .emoji {
+    .empty-state .empty-icon {
         font-size: 3rem;
         margin-bottom: 1rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
     .empty-state h3 {
         color: #6b7280;
@@ -403,7 +399,7 @@ def main():
         if results.empty:
             st.markdown("""
             <div class="empty-state">
-                <div class="emoji">🔍</div>
+                <div class="empty-icon">🔍</div>
                 <h3>No results found</h3>
                 <p>Try a different condition name or lower the sentiment threshold.</p>
             </div>
@@ -469,7 +465,7 @@ def main():
         # Empty state — no query entered yet
         st.markdown("""
         <div class="empty-state">
-            <div class="emoji">💊</div>
+            <div class="empty-icon">💊</div>
             <h3>Search for a medical condition to get started</h3>
             <p>Enter a condition like "anxiety", "acne", or "depression" to see ranked drug recommendations based on real patient reviews.</p>
         </div>
