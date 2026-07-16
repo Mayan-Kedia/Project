@@ -26,6 +26,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from src.preprocessing import load_artifact
 from src.ranking import rank_drugs
+from src.indian_brands import get_indian_names
 
 
 # ---------------------------------------------------------------------------
@@ -209,6 +210,52 @@ st.markdown("""
     .empty-state h3 {
         color: #6b7280;
         font-weight: 600;
+    }
+
+    /* ---- Indian brand name tooltip ---- */
+    .indian-brand-wrap {
+        display: inline;
+    }
+    .indian-brand {
+        color: #f59e0b;
+        font-weight: 700;
+        cursor: help;
+        position: relative;
+        display: inline-block;
+    }
+    .indian-brand .tooltip-text {
+        visibility: hidden;
+        opacity: 0;
+        background: #1e293b;
+        color: #fbbf24;
+        border: 1px solid #f59e0b;
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        white-space: nowrap;
+        position: absolute;
+        z-index: 999;
+        bottom: 130%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .indian-brand .tooltip-text::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #f59e0b transparent transparent transparent;
+    }
+    .indian-brand:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
     }
 
     /* ---- Hide Streamlit defaults for cleaner look ---- */
@@ -421,6 +468,19 @@ def main():
             for idx, row in results.iterrows():
                 score_color = get_score_color(row["finalScore"])
 
+                # Build Indian brand name HTML
+                indian_brands = get_indian_names(row["drugName"])
+                if indian_brands:
+                    brand_spans = " / ".join(
+                        f'<span class="indian-brand">{b}'
+                        f'<span class="tooltip-text">🇮🇳 Indian brand name for {row["drugName"].split(" / ")[0]}</span>'
+                        f'</span>'
+                        for b in indian_brands
+                    )
+                    drug_display_name = f'{row["drugName"]} <span class="indian-brand-wrap">/ {brand_spans}</span>'
+                else:
+                    drug_display_name = row["drugName"]
+
                 # Get a review snippet
                 snippet = get_review_snippet(
                     artifacts["all_df"], row["drugName"], row["condition"]
@@ -432,7 +492,7 @@ def main():
 
                 st.markdown(f"""
                 <div class="drug-card">
-                    <div class="drug-name">{row['drugName']}</div>
+                    <div class="drug-name">{drug_display_name}</div>
                     <div class="drug-condition">Condition: {row['condition']}</div>
                     <div class="score-row">
                         <span class="score-badge badge-final">
